@@ -75,7 +75,7 @@ export default function HowItWorks() {
           <div className="grid md:grid-cols-2 items-center gap-12">
             <div className="order-2 md:order-1">
               <h3 className="font-headline-lg text-headline-lg text-primary-container mb-6">
-                ذكاء اصطناعي يحلل كل حركة
+                تطبيق ذكي يحلل كل حركة
               </h3>
               <p className="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
                 يعتمد نظامنا على بروتوكول OBDII المتطور لنقل المعلومات بدقة
