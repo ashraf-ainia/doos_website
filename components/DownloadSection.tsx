@@ -3,16 +3,14 @@ const stores = [
     name: "App Store",
     tagline: "Download on the",
     qrAlt: "App Store QR",
-    qrSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDtNh5SkkEgwGi0CQmKY7WCOyxYB1FsH1aFEEhwWeLPCwfkP6wc9OwhmlL1GpSH3GyrHrNS-4P9xL_HMBOMCawEFQHGLToOMaX5nd3l2I99c345IEXmDvLdxoX7IdJGY7PaQvvAyaQKghrY-22VNWmNUU7quVtdz8ilnmhcMdKHvzBenBgIk4VxR9Z223B-imaKvYk2NP0qXhGQAyJAnTl1ExPVIUH3LA_o5EGmkjG8s4EeR_NyNd6Jhg",
+    qrSrc: "/qr.png",
     glowClassName: "group-hover:shadow-[0_0_40px_rgba(0,153,255,0.3)]",
   },
   {
     name: "Google Play",
     tagline: "Get it on",
     qrAlt: "Google Play QR",
-    qrSrc:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBG7vemIgD8ZEWozj178DzrQ9prPoIDtEXhbDYX5DdQxIWC33lbfBew1YFg3EMUmyBNcOAexOYe6n6eZYqOaHzMPPLElTYmnmgOuVRNc7onVQs9P5oPWqj5vVizRmV1RRyLTj0sw1IQUAzgyD3F1fgJa59t3QUuQownmNDxtcqfs7tNDcwkj7gXkNj_geZOv7frHxBhyWyWXNdHL-cBPMx0Z7lJWsxPdq6ZJe-xIHugmShNH2Rrfj2eLw",
+    qrSrc: "/qr.png",
     glowClassName: "group-hover:shadow-[0_0_40px_rgba(255,127,28,0.3)]",
   },
 ];
@@ -34,7 +32,11 @@ export default function DownloadSection() {
               <div
                 className={`bg-white p-4 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all ${store.glowClassName}`}
               >
-                <img alt={store.qrAlt} className="w-48 h-48" src={store.qrSrc} />
+                <img
+                  alt={store.qrAlt}
+                  className="w-48 h-48"
+                  src={store.qrSrc}
+                />
               </div>
               <div className="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-xl w-full h-16 justify-center">
                 <div className="text-right">
@@ -51,19 +53,25 @@ export default function DownloadSection() {
           <div className="bg-surface-container-high/50 backdrop-blur px-8 py-4 rounded-full border border-outline-variant inline-flex items-center gap-4">
             <span className="flex -space-x-3 rtl:space-x-reverse">
               <div className="w-10 h-10 rounded-full border-2 border-surface bg-primary/30 flex items-center justify-center overflow-hidden">
-                <span className="material-symbols-outlined text-xs">person</span>
+                <span className="material-symbols-outlined text-xs">
+                  person
+                </span>
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-surface bg-secondary/30 flex items-center justify-center overflow-hidden">
-                <span className="material-symbols-outlined text-xs">person</span>
+                <span className="material-symbols-outlined text-xs">
+                  person
+                </span>
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-surface bg-tertiary/30 flex items-center justify-center overflow-hidden">
-                <span className="material-symbols-outlined text-xs">person</span>
+                <span className="material-symbols-outlined text-xs">
+                  person
+                </span>
               </div>
             </span>
             <p className="font-label-sm text-on-surface">
               انضم لأكثر من{" "}
-              <span className="text-primary font-bold">100,000</span> مستخدم
-              حول العالم
+              <span className="text-primary font-bold">100,000</span> مستخدم حول
+              العالم
             </p>
           </div>
         </div>
