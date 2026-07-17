@@ -1,0 +1,375 @@
+<!DOCTYPE html><html class="dark" dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>دوس | Doos - حول سيارتك إلى سيارة خارقة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#31353c",
+                        "surface": "#0f141a",
+                        "on-tertiary-fixed-variant": "#45464e",
+                        "surface-container-low": "#171c22",
+                        "on-primary": "#003259",
+                        "surface-bright": "#353940",
+                        "inverse-primary": "#0061a5",
+                        "on-secondary-fixed-variant": "#753400",
+                        "primary-container": "#0099ff",
+                        "secondary": "#ffb68b",
+                        "tertiary-fixed-dim": "#c6c6cf",
+                        "on-tertiary-fixed": "#1a1b22",
+                        "on-primary-fixed-variant": "#00497e",
+                        "primary-fixed": "#d2e4ff",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#3f4753",
+                        "on-secondary-container": "#602a00",
+                        "electric-blue-glow": "rgba(0, 153, 255, 0.4)",
+                        "tertiary": "#c6c6cf",
+                        "chrome-silver": "#D1D5DB",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#e2e1eb",
+                        "on-background": "#dfe2eb",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "on-tertiary-container": "#2c2d34",
+                        "surface-dim": "#0f141a",
+                        "on-secondary": "#522300",
+                        "on-surface": "#dfe2eb",
+                        "error": "#ffb4ab",
+                        "fiery-orange-glow": "rgba(255, 122, 0, 0.4)",
+                        "error-container": "#93000a",
+                        "secondary-container": "#ff7f1c",
+                        "tertiary-container": "#94949d",
+                        "surface-container": "#1b2026",
+                        "background": "#0f141a",
+                        "primary-fixed-dim": "#9fcaff",
+                        "inverse-surface": "#dfe2eb",
+                        "surface-tint": "#9fcaff",
+                        "surface-container-lowest": "#0a0e14",
+                        "secondary-fixed": "#ffdbc8",
+                        "surface-container-high": "#262a31",
+                        "on-tertiary": "#2f3037",
+                        "deep-asphalt": "#0A0A0B",
+                        "on-primary-container": "#002f54",
+                        "primary": "#9fcaff",
+                        "on-primary-fixed": "#001d36",
+                        "inverse-on-surface": "#2c3137",
+                        "on-surface-variant": "#bfc7d5",
+                        "surface-container-highest": "#31353c",
+                        "outline": "#89919e",
+                        "on-secondary-fixed": "#321200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1.25rem",
+                        "stack-lg": "3rem",
+                        "stack-md": "1.5rem",
+                        "gutter": "1rem",
+                        "margin-desktop": "5rem",
+                        "stack-sm": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["IBM Plex Sans Arabic"],
+                        "body-lg": ["IBM Plex Sans Arabic"],
+                        "title-md": ["IBM Plex Sans Arabic"],
+                        "display-lg": ["IBM Plex Sans Arabic"],
+                        "body-md": ["IBM Plex Sans Arabic"],
+                        "headline-lg": ["IBM Plex Sans Arabic"],
+                        "label-sm": ["IBM Plex Sans Arabic"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0f141a;
+            color: #dfe2eb;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-blue {
+            filter: drop-shadow(0 0 15px rgba(0, 153, 255, 0.6));
+        }
+        .glow-orange {
+            filter: drop-shadow(0 0 15px rgba(255, 127, 28, 0.6));
+        }
+        .glass-panel {
+            background: rgba(49, 53, 60, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(137, 145, 158, 0.2);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, hsla(210,100%,20%,0.15) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, hsla(25,100%,20%,0.15) 0, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-lg border-b border-outline-variant/30 shadow-md docked full-width top-0 sticky z-50">
+<div class="flex flex-row-reverse justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-7xl">
+<div class="flex items-center gap-4">
+<img alt="دوس | Doos Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR7VDAISDxFIUoVvUsKJxO4-epARexd3jlm0MpXaOSM_sO6jHA_tymSI0fUz3IOWeGH1Mn0eu8Jb8Ofr9FGPaNuY6ViSqepSr1pArTO5-F2iZaoNFltKdHKuILv7S2yj-j6DyWuBLVObQNrtHJL00pWxoT0oSv1OhT6XySYBs6UrdD85Cq6ki_umKWk9NOFIxNJ3EL1It8YCFPnemz5gwptQ13hKKWUNyQznpGIxI6JlroDbgNAJvBYWOBStgWDpb0Zzs">
+<span class="font-display-lg text-headline-lg font-black tracking-tighter text-primary dark:text-primary-container hidden sm:block">دوس | Doos</span>
+</div>
+<div class="hidden md:flex flex-row-reverse gap-8 items-center">
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" href="#about">عن التطبيق</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" href="#download">تحميل التطبيق</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:scale-95 active:scale-90 duration-200 transition-all shadow-[0_0_15px_rgba(0,153,255,0.4)]">
+                    ابدأ الآن
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
+
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 items-center gap-12 relative z-10">
+<div class="text-right">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight">
+                        حول صوت سيارتك إلى <span class="text-primary-container glow-blue">سيارة خارقة</span> في ثوانٍ!
+                    </h1>
+<p class="font-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        اختبر القوة القصوى مع تطبيق دوس. استمتع بهدير المحركات الرياضية العالمية مباشرة من نظام صوت سيارتك عبر تقنية OBDII الذكية.
+                    </p>
+<div class="flex flex-col sm:flex-row-reverse gap-4">
+<a class="bg-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-center hover:scale-105 transition-transform flex items-center justify-center gap-3" href="#download">
+<span class="">حمل التطبيق مجاناً</span>
+<span class="material-symbols-outlined">download</span>
+</a>
+<a class="border border-outline px-10 py-4 rounded-xl font-bold text-center hover:bg-surface-variant/30 transition-all" href="#how-it-works">
+                            كيف يعمل؟
+                        </a>
+</div>
+</div>
+<div class="relative reveal active">
+<img class="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,153,255,0.2)] transform md:scale-110" data-alt="A side view of a high-performance red Ford Mustang Shelby GT500 isolated on a clean background, showcasing its aggressive aerodynamic lines and dark alloy wheels. The car is sleek and modern, perfectly representing the power and speed that the Doos app aims to deliver. The lighting is dramatic, highlighting the contours of the bodywork with a premium showroom feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0me5-VqBsiB3MEudQCH2BMUSjnpTlu2M7Gxxy17hQ8NRhfi7XnYcAMeomXYAcbQ1imppRAyALgqxsihyP9ntG4riU5dZAKUpwKWI8SaJtldUOSkgBwXGAEErMiYr1laNHmbk_eTQHJWP_LfRygsLxAi2_uygBeEBiIP6qEiM5X5u41cOXOV9QOXeKiQmMRMgCwPHXS3m8EUynAqCkVYx3Vf_1wtc9Wh7sSGkyzG2RzcUIEzoH0DxjNkdYdEcWy0ITVQZVA8utDFUJfqk">
+<!-- Decorative element -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary-container/20 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- How It Works (Bento Grid) -->
+<section class="py-stack-lg bg-surface-container-lowest" id="how-it-works">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg md:text-display-lg text-on-surface mb-4">كيف يعمل دوس؟</h2>
+<p class="font-body-lg text-on-surface-variant">ثلاث خطوات تفصلك عن تجربة قيادة أسطورية</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col items-center text-center hover:border-primary-container/50 transition-all group">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-6 border border-outline-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl">settings_input_component</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">صل قطعة OBDII</h3>
+<p class="font-body-md text-on-surface-variant">
+                            قم بتوصيل قطعة OBDII بمنفذ سيارتك المخصص. متوافقة مع جميع السيارات المصنعة بعد عام 1996.
+                        </p>
+</div>
+<!-- Step 2 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col items-center text-center border-primary-container/30 relative overflow-hidden group">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(0,153,255,0.4)] group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary-container text-4xl">bluetooth</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">اربط بالتطبيق</h3>
+<p class="font-body-md text-on-surface-variant">
+                            افتح تطبيق دوس وسيقوم بالاتصال تلقائياً عبر البلوتوث لقراءة بيانات المحرك والسرعة في الوقت الفعلي.
+                        </p>
+</div>
+<!-- Step 3 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col items-center text-center hover:border-secondary-container/50 transition-all group">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-6 border border-outline-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-4xl">volume_up</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-4">دوس وانطلق!</h3>
+<p class="font-body-md text-on-surface-variant">
+                            اختر صوت المحرك المفضل لديك. سيتحول نظام صوت سيارتك إلى زئير محرك V8 أو توربو خارق مع كل دوسة بنزين.
+                        </p>
+</div>
+</div>
+<!-- Technical Visual -->
+<div class="mt-20 glass-panel rounded-3xl overflow-hidden p-6 md:p-12 relative border-l-4 border-l-primary-container">
+<div class="grid md:grid-cols-2 items-center gap-12">
+<div class="order-2 md:order-1">
+<h3 class="font-headline-lg text-headline-lg text-primary-container mb-6">ذكاء اصطناعي يحلل كل حركة</h3>
+<p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                                يعتمد نظامنا على بروتوكول OBDII المتطور لنقل المعلومات بدقة متناهية وبدون أي تأخير. هذا يسمح للتطبيق بمعرفة دورات المحرك (RPM) وسرعة السيارة بدقة وتوليد الصوت المناسب للحظة تماماً كما في سيارات السباق.
+                            </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="">نقل بيانات في الوقت الحقيقي (Real-time)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="">تخصيص كامل لنغمات التوربو والانفجارات (Backfire)</span>
+</li>
+</ul>
+</div>
+<div class="order-1 md:order-2 flex justify-center">
+<div class="relative w-full max-w-md">
+<img class="w-full h-auto rounded-2xl glow-blue" data-alt="A high-tech digital illustration of a modern car's internal electronic systems, showing glowing blue and green wire paths flowing through a translucent vehicle chassis to a central electronic control unit (ECU). The circuit board is detailed and complex, emitting a soft neon glow that emphasizes the technical precision and advanced technology of the Doos engine sound system." src="https://lh3.googleusercontent.com/aida/AP1WRLtOx1FWwZxfAcT8rxlJN_884JMRzk0kcCaWxayTUNGMZeDm2OaEJnbddeiiyWt0ecnzNUc7PGGKPmgWQ2xxSh_a4nWWoK_7elx-wUJC7t-NN5SpXbyBjxYYHdZWQdxetM3AYmwLSyfuGVr25DA9mgRqtBXk8yBpBDulccOM_gzWS07XB-_QgF6l6lX3syY0hIG55SEUtHxEYhi2dBxXDuaZ1Ko1WzTRBA70GiC7MzFqYfT9aFUDppCHCxww">
+<div class="absolute -top-4 -right-4 bg-surface-container-highest p-4 rounded-xl border border-outline-variant shadow-2xl animate-pulse">
+<img class="h-20 w-auto" data-alt="A close-up shot of a sleek black OBDII bluetooth adapter device with a red label that says RevKingz. The device is angled dynamically against a dark background, showcasing its compact and premium design. Subtle lighting highlights its carbon-fiber texture and high-quality build." src="https://lh3.googleusercontent.com/aida/AP1WRLsiInPyJmnKK98aYX9WkaNh2XNNdc4E2gj-vnfkZuvTpU35jtQXuAhWTFpqslTwNq7iVojXm94CU4FX_C9wjoYhKfpC9LpkapAXwEdWnBRuz35h7WXSF1f2G3r6-9QdL8v9uEsVAyWJ_CsffvUwsYyGzM0F4tVBEikgWxOFA6OG_e9_Bl0RmrcnPi_oWOYnwzf_Lmp9cYOaUmZWCQ1b5OTAlz_41sZSToUkyUpbqTg7NjQts_1gefISo7My">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Download Section -->
+<section class="py-24 relative overflow-hidden" id="download">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,153,255,0.1),transparent_70%)]"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-12">حمل التطبيق الآن</h2>
+<div class="flex flex-col md:flex-row justify-center items-center gap-12 max-w-4xl mx-auto">
+<!-- App Store -->
+<div class="glass-panel p-10 rounded-[2.5rem] flex flex-col items-center gap-6 hover:scale-105 transition-transform duration-300 group">
+<div class="bg-white p-4 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_40px_rgba(0,153,255,0.3)] transition-all">
+<img alt="App Store QR" class="w-48 h-48" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtNh5SkkEgwGi0CQmKY7WCOyxYB1FsH1aFEEhwWeLPCwfkP6wc9OwhmlL1GpSH3GyrHrNS-4P9xL_HMBOMCawEFQHGLToOMaX5nd3l2I99c345IEXmDvLdxoX7IdJGY7PaQvvAyaQKghrY-22VNWmNUU7quVtdz8ilnmhcMdKHvzBenBgIk4VxR9Z223B-imaKvYk2NP0qXhGQAyJAnTl1ExPVIUH3LA_o5EGmkjG8s4EeR_NyNd6Jhg">
+</div>
+<div class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-xl w-full h-16 justify-center">
+
+<div class="text-right">
+<p class="text-[10px] leading-none uppercase">Download on the</p>
+<p class="text-xl font-bold leading-none">App Store</p>
+</div>
+</div>
+</div>
+<!-- Google Play -->
+<div class="glass-panel p-10 rounded-[2.5rem] flex flex-col items-center gap-6 hover:scale-105 transition-transform duration-300 group">
+<div class="bg-white p-4 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_40px_rgba(255,127,28,0.3)] transition-all">
+<img alt="Google Play QR" class="w-48 h-48" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG7vemIgD8ZEWozj178DzrQ9prPoIDtEXhbDYX5DdQxIWC33lbfBew1YFg3EMUmyBNcOAexOYe6n6eZYqOaHzMPPLElTYmnmgOuVRNc7onVQs9P5oPWqj5vVizRmV1RRyLTj0sw1IQUAzgyD3F1fgJa59t3QUuQownmNDxtcqfs7tNDcwkj7gXkNj_geZOv7frHxBhyWyWXNdHL-cBPMx0Z7lJWsxPdq6ZJe-xIHugmShNH2Rrfj2eLw">
+</div>
+<div class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-xl w-full h-16 justify-center text-center">
+
+<div class="text-right">
+<p class="text-[10px] leading-none uppercase">Get it on</p>
+<p class="text-xl font-bold leading-none">Google Play</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<div class="bg-surface-container-high/50 backdrop-blur px-8 py-4 rounded-full border border-outline-variant inline-flex items-center gap-4">
+<span class="flex -space-x-3 rtl:space-x-reverse">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary/30 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-secondary/30 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-tertiary/30 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</span>
+<p class="font-label-sm text-on-surface">انضم لأكثر من <span class="text-primary font-bold">100,000</span> مستخدم حول العالم</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 py-stack-md mt-stack-lg">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row-reverse justify-between items-center gap-8">
+<div class="flex flex-col md:items-end gap-2">
+<div class="font-title-md text-title-md font-bold text-primary flex items-center gap-2">
+<img alt="Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd8-SBKHxlL-9q54pJ7jtHZHQaSF-WR0gQk2b11JW3sfSiZCYbKYozXlWBr_FIwM28E-WJXmUM15z82x8F7E6TupgIQcUm2uX03_XKlluy5W9L8ig3Vh2YLYDuQ2qsKUh39Ayx-rcQXKnRExTTbHGOVoWmcUYEWJTv-cYa5tay-wyM9Vgetmgb10ioWOza4ZvDb4tCZ3_l8vh1uc-KbYMY_nU7bn102pWyfi-jFWyXVzVuwTv2lIL2Fode7ah_pbifIX4">
+<span class="">دوس | Doos</span>
+</div>
+<p class="font-label-sm text-chrome-silver max-w-sm text-center md:text-right">
+                    نحن في دوس™ شغوفون بتحويل تجربة القيادة. يتيح لك تطبيقنا تخصيص صوت سيارتك، بينما يقدم فريقنا منتجات مبتكرة وعالية الجودة.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-on-tertiary-container hover:text-primary transition-colors hover:underline decoration-primary" href="#">الخصوصية</a>
+<a class="font-label-sm text-on-tertiary-container hover:text-primary transition-colors hover:underline decoration-primary" href="#">الشروط والأحكام</a>
+<a class="font-label-sm text-on-tertiary-container hover:text-primary transition-colors hover:underline decoration-primary" href="#">اتصل بنا</a>
+<a class="font-label-sm text-on-tertiary-container hover:text-primary transition-colors hover:underline decoration-primary" href="#">من نحن</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">language</span>
+</a>
+</div>
+<p class="font-label-sm text-chrome-silver text-center md:text-right">
+                © ٢٠٢٤ دوس. جميع الحقوق محفوظة. اختبر القوة القصوى.
+            </p>
+</div>
+</footer>
+<script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealHandler = () => {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealHandler);
+        revealHandler(); // Initial check
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+</body></html>
