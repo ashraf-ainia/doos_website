@@ -5,7 +5,7 @@ const stores = [
     name: "App Store",
     tagline: "Download on the",
     url: IOS_APP_URL,
-    qrAlt: "App Store QR",
+    qrAlt: "امسح الرمز لتحميل تطبيق دوس من App Store",
     qrSrc: "/qr-appstore.png",
     glowClassName: "group-hover:shadow-[0_0_40px_rgba(0,153,255,0.3)]",
   },
@@ -13,7 +13,7 @@ const stores = [
     name: "Google Play",
     tagline: "Get it on",
     url: ANDROID_APP_URL,
-    qrAlt: "Google Play QR",
+    qrAlt: "امسح الرمز لتحميل تطبيق دوس من Google Play",
     qrSrc: "/qr-googleplay.png",
     glowClassName: "group-hover:shadow-[0_0_40px_rgba(255,127,28,0.3)]",
   },
@@ -44,6 +44,10 @@ export default function DownloadSection() {
                   alt={store.qrAlt}
                   className="w-48 h-48"
                   src={store.qrSrc}
+                  width={600}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-xl w-full h-16 justify-center">

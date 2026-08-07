@@ -104,6 +104,10 @@ export default function HowItWorks() {
                   className="w-full h-auto rounded-2xl glow-blue"
                   alt="رسم توضيحي للأنظمة الإلكترونية الداخلية للسيارة"
                   src="/unnamed.jpg"
+                  width={1264}
+                  height={848}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

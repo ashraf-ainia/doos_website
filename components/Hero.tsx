@@ -42,7 +42,11 @@ export default function Hero() {
           <img
             className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,153,255,0.2)] transform md:scale-110"
             alt="سيارة رياضية عالية الأداء تمثل قوة وسرعة تطبيق دوس"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0me5-VqBsiB3MEudQCH2BMUSjnpTlu2M7Gxxy17hQ8NRhfi7XnYcAMeomXYAcbQ1imppRAyALgqxsihyP9ntG4riU5dZAKUpwKWI8SaJtldUOSkgBwXGAEErMiYr1laNHmbk_eTQHJWP_LfRygsLxAi2_uygBeEBiIP6qEiM5X5u41cOXOV9QOXeKiQmMRMgCwPHXS3m8EUynAqCkVYx3Vf_1wtc9Wh7sSGkyzG2RzcUIEzoH0DxjNkdYdEcWy0ITVQZVA8utDFUJfqk"
+            src="/hero-car.png"
+            width={512}
+            height={343}
+            fetchPriority="high"
+            decoding="async"
           />
           {/* Decorative element */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary-container/20 rounded-full blur-3xl"></div>

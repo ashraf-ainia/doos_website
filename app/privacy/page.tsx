@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import TopNavBar from "@/components/TopNavBar";
-import { SITE_NAME } from "@/lib/site";
+import {
+  SITE_NAME,
+  SITE_LOCALE,
+  SITE_URL,
+  OG_IMAGE,
+} from "@/lib/site";
+
+const PAGE_TITLE = `سياسة الخصوصية | ${SITE_NAME}`;
+
+const PAGE_DESCRIPTION =
+  "سياسة الخصوصية لتطبيق دوس: نحن لا نجمع أو نخزّن أو نشارك أي بيانات شخصية للمستخدم.";
 
 export const metadata: Metadata = {
   title: "سياسة الخصوصية",
-  description:
-    "سياسة الخصوصية لتطبيق دوس: نحن لا نجمع أو نخزّن أو نشارك أي بيانات شخصية للمستخدم.",
+  description: PAGE_DESCRIPTION,
   alternates: {
     canonical: "/privacy",
   },
@@ -13,6 +22,34 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  // Without these the page would inherit the home page's og:title and og:url.
+  openGraph: {
+    type: "article",
+    url: "/privacy",
+    siteName: SITE_NAME,
+    locale: SITE_LOCALE,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${SITE_URL}/privacy#webpage`,
+  url: `${SITE_URL}/privacy`,
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  inLanguage: "ar",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  publisher: { "@id": `${SITE_URL}/#organization` },
 };
 
 const sections = [
@@ -53,6 +90,12 @@ const sections = [
 export default function PrivacyPolicy() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <TopNavBar />
       <main>
         <section className="py-stack-lg">

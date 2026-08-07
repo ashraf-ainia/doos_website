@@ -6,9 +6,13 @@ export default function TopNavBar() {
       <div className="flex flex-row-reverse justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-7xl">
         <div className="flex items-center gap-4">
           <img
-            alt="دوس | Doos Logo"
+            alt="دوس | Doos"
             className="h-12 w-auto"
             src="/logo_header.png"
+            width={720}
+            height={307}
+            fetchPriority="high"
+            decoding="async"
           />
           <span className="font-display-lg text-headline-lg font-black tracking-tighter text-primary dark:text-primary-container hidden sm:block"></span>
         </div>

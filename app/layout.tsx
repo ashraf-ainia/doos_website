@@ -1,6 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
-import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from "@/lib/site";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  SITE_LOCALE,
+  THEME_COLOR,
+  OG_IMAGE,
+} from "@/lib/site";
+import { ANDROID_APP_ID, IOS_APP_ID, IOS_APP_URL } from "@/lib/appLinks";
 import "./globals.css";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
@@ -17,6 +26,12 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "technology",
+  manifest: "/manifest.webmanifest",
+  formatDetection: { telephone: false },
   keywords: [
     "دوس",
     "Doos",
@@ -46,24 +61,34 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: SITE_NAME,
-    locale: "ar_SA",
+    locale: SITE_LOCALE,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: SITE_NAME,
-      },
-    ],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/og-image.png"],
+    images: [OG_IMAGE],
   },
+  // Safari smart app banner + Facebook/messenger app links.
+  itunes: { appId: IOS_APP_ID },
+  appleWebApp: {
+    capable: true,
+    title: SITE_NAME,
+    statusBarStyle: "black-translucent",
+  },
+  appLinks: {
+    ios: { url: IOS_APP_URL, app_store_id: IOS_APP_ID, app_name: SITE_NAME },
+    android: { package: ANDROID_APP_ID, app_name: SITE_NAME },
+    web: { url: SITE_URL, should_fallback: true },
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: THEME_COLOR,
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -78,6 +103,12 @@ export default function RootLayout({
       className={`dark ${ibmPlexSansArabic.variable}`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
