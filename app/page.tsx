@@ -10,6 +10,7 @@ import {
   SITE_TITLE,
   SITE_DESCRIPTION,
   STORE_URL,
+  OG_IMAGE,
 } from "@/lib/site";
 import { ANDROID_APP_URL, IOS_APP_URL } from "@/lib/appLinks";
 
@@ -60,7 +61,7 @@ const jsonLd = {
       operatingSystem: "iOS, Android",
       applicationCategory: "EntertainmentApplication",
       inLanguage: "ar",
-      image: `${SITE_URL}/og-image.png`,
+      image: `${SITE_URL}${OG_IMAGE.url}`,
       downloadUrl: [IOS_APP_URL, ANDROID_APP_URL],
       installUrl: [IOS_APP_URL, ANDROID_APP_URL],
       offers: {
