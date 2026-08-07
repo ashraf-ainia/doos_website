@@ -1,3 +1,4 @@
+import DownloadAppLink from "./DownloadAppLink";
 import Reveal from "./Reveal";
 
 export default function Hero() {
@@ -17,18 +18,23 @@ export default function Hero() {
             العالمية مباشرة من نظام صوت سيارتك عبر تقنية OBDII الذكية.
           </p>
           <div className="flex flex-col sm:flex-row-reverse gap-4">
-            <a
-              className="bg-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-center hover:scale-105 transition-transform flex items-center justify-center gap-3"
-              href="#download"
-            >
+            <DownloadAppLink className="bg-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-center hover:scale-105 transition-transform flex items-center justify-center gap-3">
               <span>حمل التطبيق مجاناً</span>
               <span className="material-symbols-outlined">download</span>
-            </a>
+            </DownloadAppLink>
             <a
-              className="border border-outline px-10 py-4 rounded-xl font-bold text-center hover:bg-surface-variant/30 transition-all"
-              href="#how-it-works"
+              className="border border-outline px-10 py-4 rounded-xl font-bold text-center hover:bg-surface-variant/30 transition-all flex items-center justify-center gap-3"
+              href="https://salla.sa/d0o0s"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              كيف يعمل؟
+              <span className="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">
+                storefront
+              </span>
+              <span className="font-body-md text-on-surface">
+                اشترِ جهاز Doos الآن من{" "}
+                <span className="font-bold text-secondary">متجرنا الرسمي</span>
+              </span>
             </a>
           </div>
         </div>

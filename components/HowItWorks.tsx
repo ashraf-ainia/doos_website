@@ -1,7 +1,7 @@
 const steps = [
   {
     icon: "settings_input_component",
-    title: "صل قطعة OBDII",
+    title: "وصل قطعة OBDII",
     description:
       "قم بتوصيل قطعة OBDII بمنفذ سيارتك المخصص. متوافقة مع جميع السيارات المصنعة بعد عام 1996.",
     cardClassName: "hover:border-primary-container/50 transition-all",

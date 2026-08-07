@@ -1,3 +1,5 @@
+import DownloadAppLink from "./DownloadAppLink";
+
 export default function TopNavBar() {
   return (
     <nav className="bg-surface/80 backdrop-blur-lg border-b border-outline-variant/30 shadow-md top-0 sticky z-50">
@@ -10,21 +12,29 @@ export default function TopNavBar() {
           />
           <span className="font-display-lg text-headline-lg font-black tracking-tighter text-primary dark:text-primary-container hidden sm:block"></span>
         </div>
-        <div className="hidden md:flex flex-row-reverse gap-8 items-center">
+        <div className="flex flex-row-reverse items-center gap-2 md:gap-8">
           <a
-            className="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors"
-            href="#how-it-works"
+            className="relative flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/30 transition-colors"
+            href="https://salla.sa/d0o0s"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="تسوق الآن من متجرنا على سلة"
           >
-            كيف يعمل
+            <span className="material-symbols-outlined">shopping_cart</span>
           </a>
-          <a
-            className="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors"
-            href="#download"
-          >
-            <button className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:scale-95 active:scale-90 duration-200 transition-all shadow-[0_0_15px_rgba(0,153,255,0.4)]">
-              تحميل التطبيق
-            </button>
-          </a>
+          <div className="hidden md:flex flex-row-reverse gap-8 items-center">
+            <a
+              className="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#how-it-works"
+            >
+              كيف يعمل
+            </a>
+            <DownloadAppLink className="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors">
+              <span className="inline-block bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:scale-95 active:scale-90 duration-200 transition-all shadow-[0_0_15px_rgba(0,153,255,0.4)]">
+                تحميل التطبيق
+              </span>
+            </DownloadAppLink>
+          </div>
         </div>
       </div>
     </nav>

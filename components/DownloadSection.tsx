@@ -1,16 +1,20 @@
+import { ANDROID_APP_URL, IOS_APP_URL } from "@/lib/appLinks";
+
 const stores = [
   {
     name: "App Store",
     tagline: "Download on the",
+    url: IOS_APP_URL,
     qrAlt: "App Store QR",
-    qrSrc: "/qr.png",
+    qrSrc: "/qr-appstore.png",
     glowClassName: "group-hover:shadow-[0_0_40px_rgba(0,153,255,0.3)]",
   },
   {
     name: "Google Play",
     tagline: "Get it on",
+    url: ANDROID_APP_URL,
     qrAlt: "Google Play QR",
-    qrSrc: "/qr.png",
+    qrSrc: "/qr-googleplay.png",
     glowClassName: "group-hover:shadow-[0_0_40px_rgba(255,127,28,0.3)]",
   },
 ];
@@ -25,8 +29,12 @@ export default function DownloadSection() {
         </h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 max-w-4xl mx-auto">
           {stores.map((store) => (
-            <div
+            <a
               key={store.name}
+              href={store.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${store.tagline} ${store.name}`}
               className="glass-panel p-10 rounded-[2.5rem] flex flex-col items-center gap-6 hover:scale-105 transition-transform duration-300 group"
             >
               <div
@@ -46,7 +54,7 @@ export default function DownloadSection() {
                   <p className="text-xl font-bold leading-none">{store.name}</p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         <div className="mt-20 flex justify-center">
