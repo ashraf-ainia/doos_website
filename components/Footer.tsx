@@ -1,56 +1,91 @@
-const links = [
-  { label: "الخصوصية", href: "#" },
-  { label: "الشروط والأحكام", href: "#" },
-  { label: "اتصل بنا", href: "#" },
-  { label: "من نحن", href: "#" },
+import Link from "next/link";
+import { SITE_NAME, STORE_URL } from "@/lib/site";
+import { ANDROID_APP_URL, IOS_APP_URL } from "@/lib/appLinks";
+
+const siteLinks = [
+  { label: "كيف يعمل", href: "/#how-it-works" },
+  { label: "استخدامات OBDII", href: "/#obd-uses" },
+  { label: "تحميل التطبيق", href: "/#download" },
 ];
+
+const externalLinks = [
+  { label: "المتجر الرسمي", href: STORE_URL },
+  { label: "App Store", href: IOS_APP_URL },
+  { label: "Google Play", href: ANDROID_APP_URL },
+];
+
+const YEAR = 2026;
 
 export default function Footer() {
   return (
-    <footer className="bg-surface-container-lowest border-t border-outline-variant/20 py-stack-md mt-stack-lg">
-      <div className="container mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row-reverse justify-between items-center gap-8">
-        <div className="flex flex-col md:items-end gap-2">
-          <div className="font-title-md text-title-md font-bold text-primary flex items-center gap-2">
+    <footer className="bg-surface-container-lowest border-t border-outline-variant/20 py-stack-lg mt-stack-lg">
+      <div className="container mx-auto px-margin-mobile md:px-margin-desktop">
+        <div className="flex flex-col md:flex-row-reverse justify-between gap-10 md:gap-8">
+          <div className="flex flex-col items-center md:items-end gap-3 max-w-sm mx-auto md:mx-0">
             <img
-              alt="Logo"
-              className="h-6 w-auto"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd8-SBKHxlL-9q54pJ7jtHZHQaSF-WR0gQk2b11JW3sfSiZCYbKYozXlWBr_FIwM28E-WJXmUM15z82x8F7E6TupgIQcUm2uX03_XKlluy5W9L8ig3Vh2YLYDuQ2qsKUh39Ayx-rcQXKnRExTTbHGOVoWmcUYEWJTv-cYa5tay-wyM9Vgetmgb10ioWOza4ZvDb4tCZ3_l8vh1uc-KbYMY_nU7bn102pWyfi-jFWyXVzVuwTv2lIL2Fode7ah_pbifIX4"
+              alt={SITE_NAME}
+              className="h-10 w-auto"
+              src="/logo_header.png"
+              width={720}
+              height={307}
+              loading="lazy"
+              decoding="async"
             />
-            <span>دوس | Doos</span>
+            <p className="font-label-sm text-chrome-silver text-center md:text-right leading-relaxed">
+              نحن في دوس شغوفون بتحويل تجربة القيادة. يتيح لك تطبيقنا تخصيص صوت
+              سيارتك، بينما يقدم فريقنا منتجات مبتكرة وعالية الجودة.
+            </p>
           </div>
-          <p className="font-label-sm text-chrome-silver max-w-sm text-center md:text-right">
-            نحن في دوس™ شغوفون بتحويل تجربة القيادة. يتيح لك تطبيقنا تخصيص صوت
-            سيارتك، بينما يقدم فريقنا منتجات مبتكرة وعالية الجودة.
+
+          <nav
+            aria-label="روابط الموقع"
+            className="flex flex-col sm:flex-row-reverse gap-8 sm:gap-16 text-center md:text-right"
+          >
+            <div className="flex flex-col gap-3">
+              <h2 className="font-label-sm text-label-sm uppercase text-on-surface-variant">
+                الموقع
+              </h2>
+              {siteLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  className="font-body-md text-on-surface hover:text-primary transition-colors"
+                  href={link.href}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <h2 className="font-label-sm text-label-sm uppercase text-on-surface-variant">
+                حمّل واشترِ
+              </h2>
+              {externalLinks.map((link) => (
+                <a
+                  key={link.label}
+                  className="font-body-md text-on-surface hover:text-primary transition-colors"
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </nav>
+        </div>
+
+        <div className="border-t border-outline-variant/20 mt-stack-md pt-stack-md flex flex-col sm:flex-row-reverse justify-between items-center gap-3">
+          <p className="font-label-sm text-chrome-silver text-center">
+            © {YEAR} {SITE_NAME}. جميع الحقوق محفوظة.
           </p>
-        </div>
-        <div className="flex flex-wrap justify-center gap-6">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              className="font-label-sm text-on-tertiary-container hover:text-primary transition-colors hover:underline decoration-primary"
-              href={link.href}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-        <div className="flex gap-4">
-          <a
-            className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:text-primary transition-all"
-            href="#"
+          <Link
+            className="font-label-sm text-chrome-silver hover:text-primary transition-colors"
+            href="/privacy"
           >
-            <span className="material-symbols-outlined">share</span>
-          </a>
-          <a
-            className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:text-primary transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined">language</span>
-          </a>
+            سياسة الخصوصية
+          </Link>
         </div>
-        <p className="font-label-sm text-chrome-silver text-center md:text-right">
-          © ٢٠٢٤ دوس. جميع الحقوق محفوظة. اختبر القوة القصوى.
-        </p>
       </div>
     </footer>
   );

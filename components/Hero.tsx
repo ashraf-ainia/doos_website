@@ -24,7 +24,7 @@ export default function Hero() {
             </DownloadAppLink>
             <a
               className="border border-outline px-10 py-4 rounded-xl font-bold text-center hover:bg-surface-variant/30 transition-all flex items-center justify-center gap-3"
-              href="https://salla.sa/d0o0s"
+              href="https://salla.sa/d0o0s/%D8%AC%D9%87%D8%A7%D8%B2-%D8%AF%D9%88%D9%88%D9%88%D8%B3/p1860491450"
               target="_blank"
               rel="noopener noreferrer"
             >

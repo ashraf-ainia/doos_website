@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TopNavBar from "@/components/TopNavBar";
+import Footer from "@/components/Footer";
 import {
   SITE_NAME,
   SITE_LOCALE,
@@ -83,7 +84,7 @@ const sections = [
   },
   {
     title: "تواصل معنا",
-    body: "إذا كانت لديك أي أسئلة بخصوص سياسة الخصوصية هذه، يمكنك التواصل معنا عبر البريد الإلكتروني: support@doosapp.com",
+    body: "إذا كانت لديك أي أسئلة بخصوص سياسة الخصوصية هذه، يمكنك التواصل معنا عبر البريد الإلكتروني: jaroodev@gmail.com",
   },
 ];
 
@@ -141,6 +142,7 @@ export default function PrivacyPolicy() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

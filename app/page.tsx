@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import ObdVersatility from "@/components/ObdVersatility";
 import DownloadSection from "@/components/DownloadSection";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 import {
   SITE_URL,
   SITE_NAME,
@@ -90,7 +90,7 @@ export default function Home() {
         <ObdVersatility />
         <DownloadSection />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

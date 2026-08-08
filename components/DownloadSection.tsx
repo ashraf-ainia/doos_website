@@ -61,7 +61,7 @@ export default function DownloadSection() {
             </a>
           ))}
         </div>
-        <div className="mt-20 flex justify-center">
+        {/* <div className="mt-20 flex justify-center">
           <div className="bg-surface-container-high/50 backdrop-blur px-8 py-4 rounded-full border border-outline-variant inline-flex items-center gap-4">
             <span className="flex -space-x-3 rtl:space-x-reverse">
               <div className="w-10 h-10 rounded-full border-2 border-surface bg-primary/30 flex items-center justify-center overflow-hidden">
@@ -86,7 +86,7 @@ export default function DownloadSection() {
               العالم
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
