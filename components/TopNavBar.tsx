@@ -19,7 +19,7 @@ export default function TopNavBar() {
         <div className="flex flex-row-reverse items-center gap-2 md:gap-8">
           <a
             className="relative flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/30 transition-colors"
-            href="https://salla.sa/d0o0s/%D8%AC%D9%87%D8%A7%D8%B2-%D8%AF%D9%88%D9%88%D9%88%D8%B3/p1860491450"
+            href="https://salla.sa/d0o0s/جهاز-دوس/p1463557956"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="تسوق الآن من متجرنا على سلة"
