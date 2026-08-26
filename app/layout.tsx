@@ -10,6 +10,7 @@ import {
   OG_IMAGE,
 } from "@/lib/site";
 import { ANDROID_APP_ID, IOS_APP_ID, IOS_APP_URL } from "@/lib/appLinks";
+import { Contentsquare } from "./contentsquare";
 import "./globals.css";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
@@ -114,7 +115,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-mesh font-sans antialiased">{children}</body>
+      <body className="bg-mesh font-sans antialiased">
+        <Contentsquare />
+        {children}
+      </body>
     </html>
   );
 }
