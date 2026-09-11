@@ -1,49 +1,68 @@
 import DownloadAppLink from "./DownloadAppLink";
 import HeroVideo from "./HeroVideo";
-import Reveal from "./Reveal";
+import SocialLinks from "./SocialLinks";
+import { PRODUCT_URL } from "@/lib/site";
+
+const stats = [
+  { value: "1996+", label: "متوافق مع كل السيارات بعد" },
+  { value: "iOS · Android", label: "تطبيق واحد للمنصتين" },
+];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-8 md:pt-20">
-      <div className="container mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-stretch md:grid md:grid-cols-2 md:items-center gap-8 md:gap-12 relative z-10">
-        <div className="contents md:block text-right">
-          <h1 className="order-3 md:order-none font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-0 md:mb-6 leading-tight">
-            حول صوت سيارتك إلى{" "}
-            <span className="text-primary-container glow-blue">
-              سيارة خارقة
-            </span>{" "}
-            في ثوانٍ!
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 hero-glow" aria-hidden />
+      <div className="relative max-w-[1200px] mx-auto px-6 pt-16 pb-14 md:pt-[88px] md:pb-[72px] grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 items-center">
+        <div className="max-w-[640px]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-line-bright bg-panel text-accent text-[13px] font-semibold mb-6">
+            <span className="w-2 h-2 rounded-full bg-accent inline-block" />
+            جهاز واحد · صوت + فحص
+          </div>
+          <h1 className="text-[clamp(34px,5vw,60px)] leading-[1.15] font-bold tracking-[-0.01em] text-pretty mb-5">
+            حوّل صوت سيارتك إلى سيارة خارقة
+            <br />
+            <span className="text-accent">وافحصها من نفس الجهاز</span>
           </h1>
-          <p className="order-4 md:order-none font-body-lg text-on-surface-variant mb-0 md:mb-10 max-w-xl">
-            اختبر القوة القصوى مع تطبيق دوس. استمتع بهدير المحركات الرياضية
-            العالمية مباشرة من نظام صوت سيارتك عبر تقنية OBDII الذكية.
+          <p className="text-lg leading-[1.75] text-ink-muted max-w-[540px] text-pretty mb-9">
+            قطعة دوس OBDII توصّل سيارتك بتطبيق دوس: هدير محركات رياضية عالمية
+            من سماعات سيارتك، وفحص كامل للأعطال والحساسات في الوقت الفعلي.
           </p>
-          <div className="order-2 md:order-none flex flex-col sm:flex-row-reverse gap-4">
-            <DownloadAppLink className="bg-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-center hover:scale-105 transition-transform flex items-center justify-center gap-3">
-              <span>حمل التطبيق مجاناً</span>
-              <span className="material-symbols-outlined">download</span>
+
+          <div className="flex gap-3 flex-wrap">
+            <DownloadAppLink className="inline-flex items-center gap-2.5 px-6 py-[15px] rounded-xl bg-accent hover:bg-accent-bright text-on-accent font-bold text-base transition-colors">
+              <span className="material-symbols-rounded text-[22px]" aria-hidden>
+                download
+              </span>
+              حمّل التطبيق مجاناً
             </DownloadAppLink>
             <a
-              className="border border-outline px-10 py-4 rounded-xl font-bold text-center hover:bg-surface-variant/30 transition-all flex items-center justify-center gap-3"
-              href="https://salla.sa/d0o0s/جهاز-دوس/p1463557956"
+              href={PRODUCT_URL}
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-[15px] rounded-xl bg-panel-raised border border-line-bright hover:border-accent text-ink font-semibold text-base transition-colors"
             >
-              <span className="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">
+              <span className="material-symbols-rounded text-[22px]" aria-hidden>
                 storefront
               </span>
-              <span className="font-body-md text-on-surface">
-                اشترِ جهاز Doos الآن من{" "}
-                <span className="font-bold text-secondary">متجرنا الرسمي</span>
-              </span>
+              اشترِ جهاز دوس
             </a>
           </div>
+
+          <SocialLinks className="mt-7" />
+
+          <div className="flex gap-7 mt-8 flex-wrap">
+            {stats.map((stat) => (
+              <div key={stat.value}>
+                <div className="text-[26px] font-bold">{stat.value}</div>
+                <div className="text-[13px] text-ink-dim">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
-        <Reveal className="relative order-1 md:order-none flex justify-center">
+
+        <div className="relative flex justify-center">
           <HeroVideo />
-          {/* Decorative element */}
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary-container/20 rounded-full blur-3xl"></div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

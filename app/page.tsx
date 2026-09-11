@@ -1,9 +1,11 @@
 import TopNavBar from "@/components/TopNavBar";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
-import ObdVersatility from "@/components/ObdVersatility";
+import SmartApp from "@/components/SmartApp";
+import Diagnostics from "@/components/Diagnostics";
 import DownloadSection from "@/components/DownloadSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsapp from "@/components/FloatingWhatsapp";
 import {
   SITE_URL,
   SITE_NAME,
@@ -87,10 +89,12 @@ export default function Home() {
       <main>
         <Hero />
         <HowItWorks />
-        <ObdVersatility />
+        <SmartApp />
+        <Diagnostics />
         <DownloadSection />
       </main>
       <Footer />
+      <FloatingWhatsapp />
     </>
   );
 }

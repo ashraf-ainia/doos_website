@@ -64,6 +64,29 @@
   --color-outline: #89919e;
   --color-on-secondary-fixed: #321200;
 
+  /* Doos landing palette (Claude Design "Doos Landing") */
+  --color-canvas: #0d1218;
+  --color-canvas-deep: #0a0e13;
+  --color-panel: #121922;
+  --color-panel-raised: #151c24;
+  --color-line: #1c242e;
+  --color-line-soft: #1f2933;
+  --color-line-strong: #232d38;
+  --color-line-bright: #2a3542;
+  --color-ink: #eef2f6;
+  --color-ink-soft: #dfe6ec;
+  --color-ink-muted: #a9b4bf;
+  --color-ink-dim: #8a97a6;
+  --color-ink-faint: #5f6c7a;
+  --color-accent: #f3a23a;
+  --color-accent-bright: #ffbf66;
+  --color-accent-deep: #3a2410;
+  --color-on-accent: #1a1207;
+  --color-mint: #7fe0a5;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-bright: #3ee07a;
+  --color-on-whatsapp: #08331b;
+
   --spacing-margin-mobile: 1.25rem;
   --spacing-stack-lg: 3rem;
   --spacing-stack-md: 1.5rem;
@@ -101,12 +124,24 @@ html {
 }
 
 body {
-  background-color: #0f141a;
-  color: #dfe2eb;
+  background-color: #0d1218;
+  color: #eef2f6;
   overflow-x: hidden;
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined,
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
@@ -138,4 +173,12 @@ body {
 .bg-mesh {
   background-image: radial-gradient(at 0% 0%, hsla(210, 100%, 20%, 0.15) 0, transparent 50%),
     radial-gradient(at 100% 100%, hsla(25, 100%, 20%, 0.15) 0, transparent 50%);
+}
+
+.hero-glow {
+  background: radial-gradient(900px 500px at 85% 0%, rgba(243, 162, 58, 0.16), transparent 60%);
+}
+
+.diagnostics-glow {
+  background: radial-gradient(700px 400px at 10% 100%, rgba(243, 162, 58, 0.1), transparent 60%);
 }

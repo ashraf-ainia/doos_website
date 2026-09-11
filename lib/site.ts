@@ -31,7 +31,7 @@ export const SITE_DESCRIPTION =
 export const SITE_LOCALE = "ar_SA";
 
 /** Brand colors used for the browser chrome and the PWA manifest. */
-export const THEME_COLOR = "#0f141a";
+export const THEME_COLOR = "#0d1218";
 
 /** Official storefront for the Doos OBDII hardware. */
 export const STORE_URL = "https://salla.sa/d0o0s";
@@ -48,6 +48,38 @@ export const OG_IMAGE = {
   alt: SITE_TITLE,
 } as const;
 
+/** Direct product page for the Doos OBDII device on Salla. */
+export const PRODUCT_URL = "https://salla.sa/d0o0s/جهاز-دوس/p1463557956";
+
+export const WHATSAPP_NUMBER_DISPLAY = "0552137098";
+export const WHATSAPP_URL = "https://wa.me/966552137098";
+
+export const SOCIAL_LINKS = [
+  {
+    id: "tiktok",
+    name: "TikTok",
+    label: "تيك توك",
+    handle: "@doos_device",
+    href: "https://www.tiktok.com/@doos_device",
+    icon: "/icons/tiktok.svg",
+  },
+  {
+    id: "instagram",
+    name: "Instagram",
+    label: "انستقرام",
+    handle: "@D0ooo0s",
+    href: "https://www.instagram.com/D0ooo0s",
+    icon: "/icons/instagram.svg",
+  },
+  {
+    id: "whatsapp",
+    name: "WhatsApp",
+    label: "واتساب",
+    handle: WHATSAPP_NUMBER_DISPLAY,
+    href: WHATSAPP_URL,
+    icon: "/icons/whatsapp.svg",
+  },
+] as const;
 /**
  * Google Analytics 4 measurement ID. Loaded through `@next/third-parties`,
  * which injects gtag.js after hydration so it never blocks first paint.

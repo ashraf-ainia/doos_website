@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div className="glass-panel rounded-2xl p-8 mb-8 flex items-center gap-4">
-              <span className="material-symbols-outlined text-4xl text-primary glow-blue">
+              <span className="material-symbols-rounded text-4xl text-accent">
                 verified_user
               </span>
               <p className="font-body-md text-on-surface">

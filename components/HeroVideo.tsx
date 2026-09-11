@@ -17,9 +17,13 @@ type IosVideoElement = HTMLVideoElement & {
   webkitEnterFullscreen?: () => void;
 };
 
+const controlClassName =
+  "w-10 h-10 rounded-full border border-white/20 bg-canvas/70 backdrop-blur-md text-ink inline-flex items-center justify-center cursor-pointer hover:bg-canvas transition-colors";
+
 export default function HeroVideo() {
   const ref = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [playing, setPlaying] = useState(true);
   const [muted, setMuted] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -56,6 +60,14 @@ export default function HeroVideo() {
       doc.removeEventListener("webkitfullscreenchange", onChange);
     };
   }, []);
+
+  const togglePlay = () => {
+    const video = ref.current;
+    if (!video) return;
+
+    if (video.paused) video.play().catch(() => {});
+    else video.pause();
+  };
 
   const toggleSound = () => {
     const video = ref.current;
@@ -94,15 +106,13 @@ export default function HeroVideo() {
       className={`relative ${
         fullscreen
           ? "w-full h-full flex items-center justify-center bg-black"
-          : "w-full max-w-[260px] md:max-w-[340px]"
+          : "w-[340px] max-w-full aspect-[9/16] rounded-3xl overflow-hidden border border-line-strong bg-canvas-deep shadow-[0_40px_80px_-30px_rgba(0,0,0,.8)]"
       }`}
     >
       <video
         ref={ref}
-        className={`cursor-pointer ${
-          fullscreen
-            ? "w-full h-full object-contain"
-            : "w-full h-auto rounded-3xl drop-shadow-[0_20px_50px_rgba(0,153,255,0.2)]"
+        className={`cursor-pointer block ${
+          fullscreen ? "w-full h-full object-contain" : "w-full h-full object-cover"
         }`}
         src="/promo.mp4"
         width={480}
@@ -112,32 +122,48 @@ export default function HeroVideo() {
         loop
         playsInline
         preload="auto"
-        onClick={toggleSound}
+        onClick={togglePlay}
         onDoubleClick={toggleFullscreen}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
         aria-label="فيديو تعريفي بتطبيق دوس لتحويل صوت سيارتك إلى سيارة خارقة"
       >
         متصفحك لا يدعم تشغيل الفيديو.
       </video>
-      <div className="absolute bottom-4 left-4 flex items-center gap-3">
-        <button
-          type="button"
-          onClick={toggleSound}
-          aria-label={muted ? "تشغيل صوت الفيديو" : "كتم صوت الفيديو"}
-          aria-pressed={muted}
-          className="w-12 h-12 rounded-full bg-surface/70 backdrop-blur-sm border border-outline-variant text-on-surface flex items-center justify-center hover:bg-surface hover:scale-105 transition-all"
-        >
-          <span className="material-symbols-outlined">
-            {muted ? "volume_off" : "volume_up"}
-          </span>
-        </button>
+
+      <div className="absolute bottom-3.5 left-3.5 right-3.5 flex justify-between items-center gap-2 pointer-events-none">
+        <div className="flex gap-2 pointer-events-auto">
+          <button
+            type="button"
+            onClick={togglePlay}
+            aria-label={playing ? "إيقاف الفيديو" : "تشغيل الفيديو"}
+            aria-pressed={!playing}
+            className={controlClassName}
+          >
+            <span className="material-symbols-rounded text-[22px]">
+              {playing ? "pause" : "play_arrow"}
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={toggleSound}
+            aria-label={muted ? "تشغيل صوت الفيديو" : "كتم صوت الفيديو"}
+            aria-pressed={muted}
+            className={controlClassName}
+          >
+            <span className="material-symbols-rounded text-[22px]">
+              {muted ? "volume_off" : "volume_up"}
+            </span>
+          </button>
+        </div>
         <button
           type="button"
           onClick={toggleFullscreen}
           aria-label={fullscreen ? "إنهاء وضع ملء الشاشة" : "عرض ملء الشاشة"}
           aria-pressed={fullscreen}
-          className="w-12 h-12 rounded-full bg-surface/70 backdrop-blur-sm border border-outline-variant text-on-surface flex items-center justify-center hover:bg-surface hover:scale-105 transition-all"
+          className={`${controlClassName} pointer-events-auto`}
         >
-          <span className="material-symbols-outlined">
+          <span className="material-symbols-rounded text-[22px]">
             {fullscreen ? "fullscreen_exit" : "fullscreen"}
           </span>
         </button>
