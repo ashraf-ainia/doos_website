@@ -80,3 +80,8 @@ export const SOCIAL_LINKS = [
     icon: "/icons/whatsapp.svg",
   },
 ] as const;
+/**
+ * Google Analytics 4 measurement ID. Loaded through `@next/third-parties`,
+ * which injects gtag.js after hydration so it never blocks first paint.
+ */
+export const GA_MEASUREMENT_ID = "G-G4LCC5850W";

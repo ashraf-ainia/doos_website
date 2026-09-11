@@ -8,8 +8,10 @@ import {
   SITE_LOCALE,
   THEME_COLOR,
   OG_IMAGE,
+  GA_MEASUREMENT_ID,
 } from "@/lib/site";
 import { ANDROID_APP_ID, IOS_APP_ID, IOS_APP_URL } from "@/lib/appLinks";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Contentsquare } from "./contentsquare";
 import "./globals.css";
 
@@ -119,6 +121,7 @@ export default function RootLayout({
         <Contentsquare />
         {children}
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
