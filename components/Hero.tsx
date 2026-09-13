@@ -19,7 +19,7 @@ export default function Hero() {
             جهاز واحد · صوت + فحص
           </div>
           <h1 className="text-[clamp(34px,5vw,60px)] leading-[1.15] font-bold tracking-[-0.01em] text-pretty mb-5">
-            حوّل صوت سيارتك إلى سيارة خارقة
+            حوّل صوت سيارتك إلى سيارة أسطورية
             <br />
             <span className="text-accent">وافحصها من نفس الجهاز</span>
           </h1>
