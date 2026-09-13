@@ -126,7 +126,7 @@ export default function HeroVideo() {
         onDoubleClick={toggleFullscreen}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
-        aria-label="فيديو تعريفي بتطبيق دوس لتحويل صوت سيارتك إلى سيارة خارقة"
+        aria-label="فيديو تعريفي بتطبيق دوس لتحويل صوت سيارتك إلى سيارة أسطورية"
       >
         متصفحك لا يدعم تشغيل الفيديو.
       </video>

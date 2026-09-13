@@ -34,7 +34,7 @@ export default function Footer() {
             decoding="async"
           />
           <p className="text-ink-dim text-sm leading-[1.75] max-w-[320px]">
-            نحن في دوس شغوفون بتحويل تجربة القيادة: صوت سيارة خارقة وفحص كامل
+            نحن في دوس شغوفون بتحويل تجربة القيادة: صوت سيارة أسطورية وفحص كامل
             لسيارتك من قطعة واحدة وتطبيق واحد.
           </p>
         </div>
