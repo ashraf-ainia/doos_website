@@ -11,6 +11,7 @@ const tabs = [
   { icon: "volume_up", label: "الصوت", active: false },
   { icon: "build", label: "الفحص", active: true },
   { icon: "local_gas_station", label: "الوقود", active: false },
+  { icon: "speed", label: "التسارع", active: false },
 ];
 
 /** Simulated live readings so the mockup feels like a connected device. */

@@ -44,6 +44,8 @@ export const metadata: Metadata = {
     "OBDII",
     "تشخيص السيارة",
     "فحص السيارة",
+    "قياس عزم السيارة",
+    "قياس التسارع",
     "engine sound app",
     "car sound simulator",
   ],
